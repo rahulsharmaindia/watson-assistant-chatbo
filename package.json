@@ -12,11 +12,12 @@
     "Simple",
     "Sample"
   ],
-  "author": "Alex Banks <alex@moonhighway.com> (http://www.moonhighway.com)",
+  "author": "Rahul Sharma",
   "license": "MIT",
   "dependencies": {
     "express": "^4.13.3",
     "socket.io": "^1.3.7",
-    "socket.io-client": "^1.3.7"
+    "socket.io-client": "^1.3.7",
+    "watson-developer-cloud": "^3.11.0"
   }
 }
