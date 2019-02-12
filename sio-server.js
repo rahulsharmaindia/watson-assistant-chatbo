@@ -2,7 +2,7 @@
 var express = require("express");
 var http = require("http");
 var app = express();
-var server = http.createServer(app).listen(3000);
+var server = http.createServer(app).listen(process.env.PORT);
 var io = require("socket.io")(server);
 var AssistantV1 = require('watson-developer-cloud/assistant/v1');
 
@@ -14,7 +14,7 @@ var service = new AssistantV1({
     password: 'UBPKkDmopL1nAvlE1EvJJQ7VWGRt3QC5wTTKztRB4N2h', // replace with service password
     version: '2019-02-06'
 });
-var workspace_id = '7745f5a4-5b87-4274-a58f-88617380c754'; // replace with workspace ID
+var workspace_id = 'cc8ec58b-475b-43b1-9504-a7df1f0f3020'; // replace with workspace ID
 
 io.on("connection", function (socket) {
     //send a message to watson and get the response and send the response to the client connected on this event.
