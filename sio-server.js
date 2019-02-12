@@ -10,9 +10,9 @@ app.use(express.static("./public"));
 
 // Set up Assistant service wrapper.
 var service = new AssistantV1({
-    username: '00232ea1-eb04-4a99-aa7b-0f717b50d796', // replace with service username
-    password: 'O8s5hkwxHhLY', // replace with service password
-    version: '2018-02-16'
+    username: 'UBPKkDmopL1nAvlE1EvJJQ7VWGRt3QC5wTTKztRB4N2h', // replace with service username
+    password: 'UBPKkDmopL1nAvlE1EvJJQ7VWGRt3QC5wTTKztRB4N2h', // replace with service password
+    version: '2019-02-06'
 });
 var workspace_id = '7745f5a4-5b87-4274-a58f-88617380c754'; // replace with workspace ID
 
