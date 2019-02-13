@@ -2,7 +2,7 @@
 var express = require("express");
 var http = require("http");
 var app = express();
-var server = http.createServer(app).listen(process.env.PORT);
+var server = http.createServer(app).listen(process.env.PORT || 3000);
 var io = require("socket.io")(server);
 var AssistantV1 = require('watson-developer-cloud/assistant/v1');
 
@@ -10,9 +10,9 @@ app.use(express.static("./public"));
 
 // Set up Assistant service wrapper.
 var service = new AssistantV1({
-    username: 'UBPKkDmopL1nAvlE1EvJJQ7VWGRt3QC5wTTKztRB4N2h', // replace with service username
-    password: 'UBPKkDmopL1nAvlE1EvJJQ7VWGRt3QC5wTTKztRB4N2h', // replace with service password
-    version: '2019-02-06'
+    version: '2019-02-13',
+  iam_apikey: 'UBPKkDmopL1nAvlE1EvJJQ7VWGRt3QC5wTTKztRB4N2h',
+  url: 'https://gateway-lon.watsonplatform.net/assistant/api'
 });
 var workspace_id = 'cc8ec58b-475b-43b1-9504-a7df1f0f3020'; // replace with workspace ID
 
