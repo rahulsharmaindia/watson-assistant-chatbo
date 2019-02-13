@@ -1,5 +1,5 @@
 
-var socket = io("http://localhost:3000");
+var socket = io("https://watson-chatbot-nodejs.herokuapp.com");
 
 socket.on("disconnect", (message)=> {
     setTitle("Disconnected");
